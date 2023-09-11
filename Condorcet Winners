@@ -1,0 +1,23 @@
+import numpy as np
+from itertools import  combinations, combinations_with_replacement, permutations
+
+a = 'a'
+b = 'b'
+c = 'c'
+# choices = [[a, b, c], [c, a, b], [a, c, b], [b, c, a], [b, a, c], [c, b, a]]
+choices = ['a', 'b', 'c']
+
+num_voters = 3
+num_choices = 3
+
+# num_combs = combinations(choices, num_choices)
+# print([''.join(i) for i in num_combs])
+count = 0
+
+# need permutations not combinations
+
+for permutations in combinations(permutations(choices, 3), 3):
+  count += 1
+  print(permutations)
+
+print(count)
